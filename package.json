@@ -1,0 +1,25 @@
+{
+  "name": "re-generator",
+  "version": "1.0.0",
+  "description": "Generates webpack boilerplates",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpsierens/re-generator.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Jean-Pierre Sierens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpsierens/re-generator/issues"
+  },
+  "homepage": "https://github.com/jpsierens/re-generator#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
