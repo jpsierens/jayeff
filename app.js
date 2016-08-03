@@ -2,13 +2,25 @@
 
 const fs = require('fs');
 const prompt = require('prompt');
+const fileStructure = require('./sync.json');
 
-prompt.start();
+const generate = (struct) => {
 
-prompt.get(['Name','Age'], (err, res) => {
-	console.log('Thanks for your input');
-	console.log(res)
-	const { name, age } = res;
+	Object.keys(struct).forEach((key) => {
+		let keyType = typeof struct[key];
 
-	fs.writeFileSync('data.txt',`subject name: ${name}, age: ${age}`);
-});
+		console.log(keyType)
+
+		if (keyType !== 'object' && keyType !== 'string') {
+			throw 'Error: not a file (string) or directory (object).'
+		}
+
+		if (typeof (struct[key]) === 'object') {
+			fs.mkdirSync(key);
+		} else if (typeof (struct[key]) === 'string') {
+			fs.writeFileSync(key);
+		} 
+	});
+}
+
+generate(fileStructure);
