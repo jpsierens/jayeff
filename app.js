@@ -3,24 +3,37 @@
 const fs = require('fs');
 const prompt = require('prompt');
 const fileStructure = require('./sync.json');
+const rootPath = 'root';
 
-const generate = (struct) => {
+const generate = (struct, path) => {
 
 	Object.keys(struct).forEach((key) => {
-		let keyType = typeof struct[key];
+		const keyType = typeof struct[key];
+		const nextPath = `${path}/${key}`;
 
-		console.log(keyType)
 
 		if (keyType !== 'object' && keyType !== 'string') {
-			throw 'Error: not a file (string) or directory (object).'
+			throw 'Error: not a file (string) or directory (object).';
 		}
 
-		if (typeof (struct[key]) === 'object') {
-			fs.mkdirSync(key);
-		} else if (typeof (struct[key]) === 'string') {
-			fs.writeFileSync(key);
+		if (keyType === 'object') {
+
+			fs.mkdirSync(nextPath);
+
+			return generate(struct[key], nextPath);
+
+		} else if (keyType === 'string') {
+			fs.writeFileSync(nextPath, struct[key]);
 		} 
 	});
 }
 
-generate(fileStructure);
+
+try {
+	fs.mkdirSync(rootPath);
+	generate(fileStructure, `./${rootPath}`);
+	console.log(`Generated file structure at ./${rootPath}`);
+} catch (e) {
+	throw e;
+}
+
