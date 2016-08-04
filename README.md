@@ -1,1 +1,1 @@
-convert a json to a file tree
+generate a file tree from json
