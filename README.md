@@ -1,2 +1,1 @@
-# re-generator
-Generates react + redux boilerplates
+convert a json to a file tree
