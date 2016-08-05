@@ -1,7 +1,7 @@
 {
-  "name": "re-generator",
+  "name": "json-to-file-tree",
   "version": "1.0.0",
-  "description": "Generates webpack boilerplates",
+  "description": "Generates a file tree from json",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,4 @@
     "url": "https://github.com/jpsierens/re-generator/issues"
   },
   "homepage": "https://github.com/jpsierens/re-generator#readme",
-  "dependencies": {
-    "prompt": "^1.0.0"
-  }
 }
