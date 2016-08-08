@@ -7,7 +7,7 @@
 ## Install
 
 ```
-$ npm install 
+$ git clone https://github.com/jpsierens/json-to-file-tree.git
 ```
 
 
