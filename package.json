@@ -2,21 +2,21 @@
   "name": "json-to-file-tree",
   "version": "1.0.0",
   "description": "Generates a file tree from json",
-  "main": "app.js",
+  "main": "jsonToFileTree.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jpsierens/re-generator.git"
+    "url": "https://github.com/jpsierens/json-to-file-tree"
   },
   "keywords": [
     "node"
   ],
-  "author": "Jean-Pierre Sierens",
+  "author": "Jean-Pierre Sierens (http://jpsierens.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jpsierens/re-generator/issues"
+    "url": "https://github.com/jpsierens/json-to-file-tree/issues"
   },
-  "homepage": "https://github.com/jpsierens/re-generator#readme",
+  "homepage": "https://github.com/jpsierens/json-to-file-tree#readme"
 }
