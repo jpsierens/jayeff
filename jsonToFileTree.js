@@ -27,6 +27,15 @@ const generateTree = (struct, path) => {
 
 
 const jsonToFileTree = (fileStructure, rootDirectory, cb) => {
+	if (typeof fileStructure !== 'object') {
+		throw `ERROR: fileStructure should be an object, you passed in a ${typeof fileStructure}`;
+	}
+	if (typeof rootDirectory !== 'string') {
+		throw `ERROR: rootDirectory should be a string, you passed in a ${typeof rootDirectory}`;
+	}
+	if (typeof cb !== 'function') {
+		throw `ERROR: callback must be a function, you passed in a ${typeof cb}`;
+	}
 
 	try {
 		fs.mkdirSync(rootDirectory);
