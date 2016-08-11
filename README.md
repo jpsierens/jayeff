@@ -17,16 +17,14 @@ $ npm i json-to-file-tree
 // The json we want to convert
 const fileStructure = require('./tree.json');
 // Our converter
-const jsonToFileTree = require('./jsonToFileTree');
+const jayeff = require('../jayeff');
 // Where we want the dir tree to go
-const rootDirectory = './root';
+const rootDirectory = './';
 
-// just call the func, pass in the stuff, and optionally, a callback.
-jsonToFileTree(fileStructure, rootDirectory, (err) => {
-	if (err) throw err;
+// just call the func, pass in the stuff.
+jayeff(fileStructure, rootDirectory);
 
-	console.log('success!');
-});
+console.log('Done');
 ```
 
 

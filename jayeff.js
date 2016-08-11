@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs');
+const pathExistsSync = require('path-exists').sync;
 
 const generateTree = (struct, path) => {
 
@@ -25,24 +26,31 @@ const generateTree = (struct, path) => {
 	});
 }
 
+const createRoot = (path) => {
+	if (pathExistsSync(path)) return;
 
-const jsonToFileTree = (fileStructure, rootDirectory, cb) => {
+	try {
+		fs.mkdirSync(path);
+	} catch (e) {
+		throw e;
+	}
+}
+
+
+const jsonToFileTree = (fileStructure, rootDirectory = "./") => {
 	if (typeof fileStructure !== 'object') {
 		throw `ERROR: fileStructure should be an object, you passed in a ${typeof fileStructure}`;
 	}
 	if (typeof rootDirectory !== 'string') {
 		throw `ERROR: rootDirectory should be a string, you passed in a ${typeof rootDirectory}`;
 	}
-	if (typeof cb !== 'function') {
-		throw `ERROR: callback must be a function, you passed in a ${typeof cb}`;
-	}
+
+	createRoot(rootDirectory);
 
 	try {
-		fs.mkdirSync(rootDirectory);
 		generateTree(fileStructure, rootDirectory);
-		if (cb) cb(null);
 	} catch (e) {
-		if (cb) cb(e);
+		throw e;
 	}
 } 
 

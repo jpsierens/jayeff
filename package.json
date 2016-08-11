@@ -1,8 +1,8 @@
 {
-  "name": "json-to-file-tree",
+  "name": "jayeff",
   "version": "1.0.1",
   "description": "Generates a file tree from json",
-  "main": "jsonToFileTree.js",
+  "main": "jayeff.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jpsierens/json-to-file-tree/issues"
   },
-  "homepage": "https://github.com/jpsierens/json-to-file-tree#readme"
+  "homepage": "https://github.com/jpsierens/json-to-file-tree#readme",
+  "dependencies": {
+    "path-exists": "^3.0.0"
+  }
 }
