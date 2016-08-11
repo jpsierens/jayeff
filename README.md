@@ -22,7 +22,7 @@ const jayeff = require('../jayeff');
 const rootDirectory = './';
 
 // just call the func, pass in the stuff.
-// rootDir is optional, defaults to the current dir.
+// rootDirectory is optional, defaults to the current dir.
 jayeff(fileStructure, rootDirectory);
 
 console.log('Done');
