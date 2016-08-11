@@ -1,4 +1,4 @@
-# json-to-file-tree
+# jayeff
 
 > Convert json to a file tree
 
