@@ -7,7 +7,7 @@
 ## Install
 
 ```
-$ npm i json-to-file-tree
+$ npm i jayeff
 ```
 
 
