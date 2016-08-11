@@ -1,7 +1,7 @@
 // The json we want to convert
 const fileStructure = require('./tree.json');
 // Our converter
-const jsonToFileTree = require('./jsonToFileTree');
+const jsonToFileTree = require('../jsonToFileTree');
 // Where we want the dir tree to go
 const rootDirectory = './root';
 
