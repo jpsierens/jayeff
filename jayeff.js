@@ -37,7 +37,7 @@ const createRoot = (path) => {
 }
 
 
-const jsonToFileTree = (fileStructure, rootDirectory = "./") => {
+const jayeff = (fileStructure, rootDirectory = "./") => {
 	if (typeof fileStructure !== 'object') {
 		throw `ERROR: fileStructure should be an object, you passed in a ${typeof fileStructure}`;
 	}
@@ -54,4 +54,4 @@ const jsonToFileTree = (fileStructure, rootDirectory = "./") => {
 	}
 } 
 
-module.exports = jsonToFileTree;
+module.exports = jayeff;

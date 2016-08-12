@@ -25,6 +25,7 @@ const rootDirectory = './';
 // rootDirectory is optional, defaults to the current dir.
 jayeff(fileStructure, rootDirectory);
 
+// jayeff is sync, so this will run after.
 console.log('Done');
 ```
 
