@@ -44,7 +44,7 @@ If it's an object, a directory is created. If it's a string, a file is created w
 
 ## API
 
-effjay:
+jayeff:
 * @param fileStructure: Object, The json to be converted to file tree
 * @param rootDirectory: String, The root directory, the directory will start from this point
 
