@@ -42,3 +42,9 @@ json should be like this:
 
 If it's an object, a directory is created. If it's a string, a file is created with the string as content.
 
+## API
+
+effjay:
+* @param fileStructure: Object, The json to be converted to file tree
+* @param rootDirectory: String, The root directory, the directory will start from this point
+
