@@ -1,4 +1,4 @@
-# jayeff
+# jayeff ![build status](https://travis-ci.org/jpsierens/jayeff.svg?branch=master)
 
 > Convert json to a file tree
 
